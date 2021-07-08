@@ -1,5 +1,6 @@
 // next 8
 
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>I am a React Learner!!!</p>
+        <Counter></Counter>
         <ul>
           {
             nayoks.map(nayok => <li>{nayok}</li>)
@@ -30,6 +32,20 @@ function App() {
     </div>
   );
 }
+
+function Counter() {
+  const [count, setCount] = useState(10)
+  // const handleIncrease = () => setCount(count + 1)
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={ () => setCount(count - 1)}>Decrease</button>
+      <button onClick={ () => setCount(count + 1)}>Increase</button>
+    </div>
+  )
+}
+
 
 
 function Product(props) {
