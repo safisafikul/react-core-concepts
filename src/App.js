@@ -1,22 +1,22 @@
 // next 33/3
 import React from 'react'
 import './App.css'
-import MovieCounter from './components/MovieCounter';
-import Nayok from './components/Nayok'
+import MovieCounter from './components/MovieCounter'
+// import FirstNayok from './components/FirstNayok'
+// import NayokMap from './components/NayokMap'
+import NayokUseEffect from './components/NayokUseEffect'
 
-function App() {
 
-  const nayoks = ['SAFI', 'LARK', 'JACK', 'MONA']
-  
+function App() {  
   return (
     <div className="App">
       <MovieCounter />
-      <Nayok name={nayoks[0]} age="25" />
-      <Nayok name={nayoks[1]} />
-      <Nayok name={nayoks[2]} />
-      <Nayok name={nayoks[3]} />
+      <NayokUseEffect />
+
+      {/* <NayokMap /> */}
+      {/* <FirstNayok /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
